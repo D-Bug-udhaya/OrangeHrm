@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+	<parameter name="username" value="U@123gmail.com"></parameter>
+	<parameter name="pass" value="U@123"></parameter>
+	
+	<parameter name="username" value="Viji123gmail.com"></parameter>
+	<parameter name="pass" value="Vino@123"></parameter>
+
+<test thread-count="5" parallel="tests" name="ChromeTest">
+	<parameter name="browser" value="Chrome"></parameter>
+	<classes>
+		<class name="com.AutomationPractice.FBLogin"></class>
+	</classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" parallel="tests" name="EdgeTest">
+	<parameter name="browser" value="Edge"></parameter>
+	<classes>
+		<class name="com.AutomationPractice.FBLogin"></class>
+	</classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
